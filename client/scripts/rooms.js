@@ -4,5 +4,6 @@ var Rooms = {
 
   add: function(room) {
     Rooms.roomsList[room] = true;
+    
   }
 };

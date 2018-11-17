@@ -5,7 +5,6 @@ var FormView = {
   initialize: function() {
     FormView.$form.on('submit', FormView.handleSubmit);
     FormView.toggleFriend();
-    FormView.addRoom();
   },
 
   handleSubmit: function(event) {
@@ -14,11 +13,12 @@ var FormView = {
     
     var message = {
       username: window.location.search.slice(10),
-      text: $('#message').val()
-    }
+      text: $('#message').val(),
+      roomname: RoomsView.$select.val()
+    };
     
     Parse.create(message, console.log(message));
-    Parse.readAll(MessagesView.renderMessage(message))
+    Parse.readAll(MessagesView.renderMessage(message));
 
     console.log('click!');
   },
@@ -29,15 +29,10 @@ var FormView = {
   },
 
   toggleFriend: function() {
-    $('.username').click(function(event){
+    $('.username').click(function(event) {
       // var username = $(this).data()
       Friends.toggleStatus();
-    })
-  },
-
-  addRoom: function() {
-    $('button').click(function(event) {
-      Rooms.add();
-    })
+    });
   }
+
 };

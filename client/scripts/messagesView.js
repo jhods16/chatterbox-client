@@ -19,7 +19,7 @@ var MessagesView = {
       html += MessageView.render(message);
     }
     
-    MessagesView.$chats.append(html);
+    MessagesView.$chats.prepend(html);
   }
 
 };

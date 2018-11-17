@@ -21,8 +21,12 @@ var App = {
     Parse.readAll((data) => {
       // examine the response from the server request:
       var messages = data.results;
+      console.log(messages);
+      // var rooms = 
       MessagesView.renderMessage(messages);
-
+      RoomsView.renderRoom(messages);
+      RoomsView.roomChange(messages);
+      
       callback();
     });
   },
