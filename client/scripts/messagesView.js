@@ -7,17 +7,16 @@ var MessagesView = {
   },
 
   renderMessage: function(message) {
-    var html = '';
-    var strMessage = JSON.stringify(message);
-    console.log(message)
+    // var html = '';
 
     // html += MessageView.render(message);
 
-    // //if messages.results
+    // if (message.results) {
     //   for (var i = 0; i < results.length; i++) {
     //     var message = results[i];
     //     html += MessagesView.render(message);
     //   }
+    // }
 
     // //else 
     //   html = MessageView.render(message)

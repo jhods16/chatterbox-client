@@ -12,9 +12,13 @@ var FormView = {
     // Stop the browser from submitting the form
     event.preventDefault();
     
-    var $input = $('#message').val();
+    var message = {
+      username: window.location.search.slice(10),
+      text: $('#message').val()
+    }
     
-    Parse.create($input, MessagesView.renderMessage($input));
+    Parse.create(message, console.log(message));
+    Parse.readAll(MessagesView.renderMessage(message))
 
     console.log('click!');
   },
