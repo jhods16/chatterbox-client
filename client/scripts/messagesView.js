@@ -7,21 +7,19 @@ var MessagesView = {
   },
 
   renderMessage: function(message) {
-    // var html = '';
+    var html = '';
 
-    // html += MessageView.render(message);
-
-    // if (message.results) {
-    //   for (var i = 0; i < results.length; i++) {
-    //     var message = results[i];
-    //     html += MessagesView.render(message);
-    //   }
-    // }
-
-    // //else 
-    //   html = MessageView.render(message)
+    if (Array.isArray(message)) {
+      for (var i = 0; i < message.length; i++) {
+        if (message[i].username) {
+          html += MessageView.render(message[i]);
+        }
+      }
+    } else {
+      html += MessageView.render(message);
+    }
     
-    MessagesView.$chats.append(MessageView.render(message));
+    MessagesView.$chats.append(html);
   }
 
 };

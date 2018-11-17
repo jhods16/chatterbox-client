@@ -1,6 +1,8 @@
 var Messages =  {
 
-  allMessages: [];
+  allMessages: [],
 
-  saveMessages
+  saveMessages: function(message) {
+    allMessages.push(message);
+  }
 };
