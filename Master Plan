@@ -1,0 +1,21 @@
+Master Plan
+
+Model
+  1. messages
+  2. friends
+  3. rooms
+
+  Actions: store a message, friend, room
+
+View -> DOM
+  1. message/messages view
+  2. rooms view
+
+  Actions: render messages and rooms and displays on DOM
+
+Controller
+  1. parse
+  2. form view?
+
+  Actions: listens for events/user input and requests/posts/verbs to model
+  
