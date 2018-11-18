@@ -28,11 +28,5 @@ var FormView = {
     FormView.$form.find('input[type=submit]').attr('disabled', status);
   },
 
-  toggleFriend: function() {
-    $('.username').click(function(event) {
-      // var username = $(this).data()
-      Friends.toggleStatus();
-    });
-  }
 
 };

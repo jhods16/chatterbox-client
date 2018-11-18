@@ -39,7 +39,6 @@ var RoomsView = {
       });
       MessagesView.$chats.empty();
       MessagesView.renderMessage(roomMessages);
-      console.log(roomMessages);
       
     });
   }

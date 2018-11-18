@@ -3,7 +3,7 @@ var MessagesView = {
   $chats: $('#chats'),
 
   initialize: function() {
-  //   FormView.$form.on('submit', MessagesView.renderMessage());
+    Friends.addFriend();
   },
 
   renderMessage: function(message) {
@@ -21,5 +21,4 @@ var MessagesView = {
     
     MessagesView.$chats.prepend(html);
   }
-
 };
