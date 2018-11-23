@@ -4,7 +4,6 @@ var FormView = {
 
   initialize: function() {
     FormView.$form.on('submit', FormView.handleSubmit);
-    FormView.toggleFriend();
   },
 
   handleSubmit: function(event) {
